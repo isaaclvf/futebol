@@ -27,4 +27,8 @@ public class Clube {
     public Boolean equals(Clube clube) {
         return this.nome.equals(clube.nome);
     }
+
+    public String toString() {
+        return this.nome;
+    }
 }
