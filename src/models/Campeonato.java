@@ -6,9 +6,11 @@ import java.util.Comparator;
 
 public class Campeonato {
     ArrayList<Clube> clubes;
+    private Boolean finalizado;
 
     public Campeonato(Clube... clubes) {
         this.clubes = new ArrayList<Clube>();
+
         for (Clube clube : clubes) {
             this.clubes.add(clube);
         }
@@ -49,6 +51,7 @@ public class Campeonato {
 
         // Para ficar fácil de entender o resultado final
         System.out.println(m + " " + golsM + " x " + v + " " + golsV);
+        finalizado = true;
     }
 
     public String getClassificacao() {
@@ -78,6 +81,10 @@ public class Campeonato {
     }
 
     public String getCampeao() {
+        if (!finalizado) {
+            return "Não há campeão porque o campeaonato ainda não foi jogado";
+        }
+
         return clubes.get(0).toString();
     }
 }
