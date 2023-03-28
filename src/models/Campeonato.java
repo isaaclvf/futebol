@@ -82,7 +82,7 @@ public class Campeonato {
 
     public String getCampeao() {
         if (!finalizado) {
-            return "Não há campeão porque o campeaonato ainda não foi jogado";
+            return "Não há campeão porque o campeonato ainda não foi jogado";
         }
 
         return clubes.get(0).toString();
