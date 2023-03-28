@@ -26,6 +26,7 @@ public class Campeonato {
                 jogarPartida(clubeDaCasa, clubeVisitante);
             }
         }
+        finalizado = true;
     }
 
     private void jogarPartida(Clube m, Clube v) {
@@ -51,7 +52,6 @@ public class Campeonato {
 
         // Para ficar fácil de entender o resultado final
         System.out.println(m + " " + golsM + " x " + v + " " + golsV);
-        finalizado = true;
     }
 
     public String getClassificacao() {
