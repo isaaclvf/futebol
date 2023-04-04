@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class Campeonato {
-    ArrayList<Clube> clubes;
+    private ArrayList<Clube> clubes;
     private Boolean finalizado;
 
     public Campeonato(Clube... clubes) {
@@ -59,13 +59,13 @@ public class Campeonato {
             @Override
             public int compare(Clube a, Clube b) {
                 // Compara 'b' com 'a' nessa ordem porque assim fica em ordem decrescente
-                int pontosComp = Integer.compare(b.pontos, a.pontos);
+                int pontosComp = Integer.compare(b.getPontos(), a.getPontos());
 
                 if (pontosComp != 0) {
                     return pontosComp;
                 }
 
-                return Integer.compare(b.saldoGols, a.saldoGols);
+                return Integer.compare(b.getSaldoGols(), a.getSaldoGols());
             }
         };
 
@@ -74,7 +74,7 @@ public class Campeonato {
         String classificacao = "";
 
         for (Clube clube : clubes) {
-            classificacao += clube.toString() + " " + clube.pontos + " " + clube.saldoGols + "\n";
+            classificacao += clube.toString() + " " + clube.getPontos() + " " + clube.getSaldoGols() + "\n";
         }
 
         return classificacao;

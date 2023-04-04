@@ -1,9 +1,9 @@
 package models;
 
 public class Clube {
-    String nome;
-    int pontos;
-    int saldoGols;
+    private String nome;
+    private int pontos;
+    private int saldoGols;
 
     public Clube(String nome) {
         this.nome = nome;
@@ -22,6 +22,18 @@ public class Clube {
 
     public void perder(int saldoGols) {
         this.saldoGols -= saldoGols;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public int getPontos() {
+        return this.pontos;
+    }
+
+    public int getSaldoGols() {
+        return this.saldoGols;
     }
 
     public Boolean equals(Clube clube) {
